@@ -1,6 +1,4 @@
 # FreeBox-repondeur
-
-FreeBox-repondeur
 =================
 Plugin FreeBox-repondeur
 
@@ -26,3 +24,5 @@ Commandes Vocales
 Fonctionnement du répondeur:
 A interval régulier, le plugin mail analyse vos mails. Dés qu'un mail se trouve dans le dossier speech de votre boite, le plugin mail copie le message .wav dans le dossier ./plugins/mail/speech.
 Vous avez donc ensuite la possibilité de connaitre le nombre de messages dans le dossier, de lire les .wav présents dans le dossier ou enfin de supprimer les messages du dossier (ATTENTION LES MESSAGES SUPPRIMES NE VONT PAS DANS LA CORBEILLE ET SONT IRRECUPERABLES !).
+
+Voici un tuto explicatif http://impimg.free.fr/zimbra/tuto.html
