@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "FreeBox-repondeur"  : {
+      "description": "FreeBox-repondeur",
+	  "Auteur": "Avatar Rousseau (Dark Best)",
+      "version": "3.16"
+      }
+  }
+}

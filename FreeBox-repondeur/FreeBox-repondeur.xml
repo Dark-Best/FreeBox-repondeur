@@ -1,0 +1,16 @@
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleFreeBox-repondeur" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+<rule id="ruleFreeBox-repondeur" scope="public">
+<example>Sarah lit mes messages</example>
+<tag>out.action=new Object(); </tag>
+<tag>out._attributes.dictation="false";</tag>
+<item>Sarah</item>
+    
+<one-of>      
+<item>j'ai des messages.<tag>out.action.nombr="nombre";</tag></item>
+<item>efface les messages du répondeur sil te plait.<tag>out.action.mess="efface";</tag></item>
+<item>répondeur.<tag>out.action.mess="lire";</tag></item>
+</one-of>   
+<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/FreeBox-repondeur";</tag>
+</rule>
+
+</grammar>

@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery("#plugin-menu .plugin-nav a").click(function () {
+            jQuery("#plugin-menu .content > ul").hide();
+            jQuery("#plugin-menu .plugin-nav ul li").removeClass("active");
+            jQuery(this).parent().addClass("active");
+            jQuery("#" + jQuery(this).data("toggle")).show();
+            return false;
+        });
+    });
+</script>
+
+<p class="page-header">
+    <span class="lead">Plugin FreeBox-repondeur</span><br/><br/>
+
+Ce plugin permet de connaitre le nombre de message sur votre répondeur FREEBOX, de les lire et de les effacer.<br/><br/>
+
+    
+    <b>Plugins et programmes requis :</b><br/>
+    - Plugin Mail<br/>
+    - Vlc<br/><br/>
+    
+
+    <b>V1.0 :</b><br/>
+    - Comptage des messages <br/>
+    - Lecture des messages .wav par VLC <br/>
+    - Effacement des messages<br/>
+</p>
+
+<div id="plugin-menu" class="row-fluid">
+    <!-- Navigation -->
+    <div class="span3 well plugin-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header">Documentation</li>
+            <li class="active"><a href="" data-toggle="plugin-doc">Préparation</a></li>
+            <li class="nav-header">Configurations nécéssaires</li>
+            <li><a href="#" data-toggle="fonctionnement">Fonctionnement</a></li>
+            <li><a href="#" data-toggle="Commandes">Commandes Vocales</a></li>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div class="span9 content">
+
+        <ul class="unstyled" id="plugin-doc">
+            1°) Configurer la réception des messages FREEBOX sur votre boite mail sur le site <a href="http://portail.free.fr" target="_blank">portail.free.fr</a> rubrique mon compte> Téléphonie > Gestion de la messagerie vocale. Sélectionnez l'option "Fichier son envoyé en attachement"<br/>
+            2°) Dans votre boite mail, sur le site zimbra.free.fr par exemple, créer un dossier "speech" puis créer un filtre de déplacement des mails contenant l'objet [FREEBOX]. Ainsi tout vos mail contenant un message répondeur iront automatiquement dans ce dossier<br/>
+            3°) Compléter les parametres du plugin mail par l'interface web de sarah http://127.0.0.1/home. Dans la case Speechbox indiquez speech<br/>
+            4°) Installer le programme <a href="http://www.01net.com/outils/telecharger/windows/Multimedia/lecteurs_video_dvd/fiches/tele23823.html" target="_blank">VLC</a> (si ce n'est déjà fait!)<br/>
+
+        </ul>
+
+        
+            
+            Fonctionnement du répondeur:<br/>
+A interval régulier, le plugin mail analyse vos mails. Dés qu'un mail se trouve dans le dossier speech de votre boite, le plugin mail copie le message .wav dans le dossier ./plugins/mail/speech.<br/>
+Vous avez donc ensuite la possibilité de connaitre le nombre de messages dans le dossier, de lire les .wav présents dans le dossier ou enfin de supprimer les messages du dossier (ATTENTION LES MESSAGES SUPPRIMES NE VONT PAS DANS LA CORBEILLE ET SONT IRRECUPERABLES !).<br/>
+		
+
+    </div>
+</div>
